@@ -1,8 +1,8 @@
 # See <a href="http://www.cambridge.org/features/astronomy/">Practical Astronomy with your Calculator or Spreadsheet</a>
 
-fix = (x) -> x - x%1 # integer part
+fix = (x) -> x - x%1 # Integer part
 
-$blab.julian = (date) ->
+julian = (date) ->
     d = date.getDate()+date.getHours()/24
     m = date.getMonth()
     y = date.getFullYear()
@@ -15,4 +15,6 @@ $blab.julian = (date) ->
     D = fix(30.6001*(m+1))
     B+C+D+d+1720994.5
 
+# Export
+$blab.julian = julian
 $blab.fix = fix
